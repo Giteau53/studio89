@@ -1,0 +1,111 @@
+.slider,
+.slider__interieur {
+  max-width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.slider__interieur {
+  padding: 2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 0;
+}
+
+.slider__image {
+  position: absolute;
+  z-index: -1;
+}
+
+.punchline {
+  position: relative;
+  display: flex;
+  flex-flow: column;
+  max-width: 63rem;
+  justify-content: center;
+}
+
+.punchline__sous-titre {
+  font-weight: 100;
+  font-size: 1.6rem;
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
+}
+
+.punchline__titre {
+  font-size: 3.4rem;
+}
+.punchline__bouton {
+  position: relative;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 1.3rem;
+  margin-top: 1rem;
+  margin-left: -0.5rem;
+  letter-spacing: 0.1rem;
+}
+
+.punchline__bouton:visited {
+  color: white;
+}
+
+.punchline__bouton::before {
+  content: url(../svg/play.svg);
+  width: 5.5em;
+  display: inline-block;
+  margin-right: 1em;
+  vertical-align: middle;
+  transform: scale(1, 1);
+  transition: all 0.3s ease-out;
+}
+
+.punchline__bouton:hover::before {
+  transform: scale(1.125, 1.125);
+}
+
+.punchline__bouton::after {
+  content: "";
+  display: block;
+  background: rgb(255, 255, 255);
+  width: 5.5em;
+  height: 5.5em;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  opacity: 0.5;
+  border-radius: 50%;
+  animation: cliqueMoiFort 3s infinite;
+}
+
+@keyframes cliqueMoiFort {
+  from {
+    transform: scale(0.5, 0.5);
+    opacity: 0.8;
+  }
+  to {
+    transform: scale(1.25, 1.25);
+    opacity: 0;
+  }
+}
+
+.astronaute {
+  right: -32%;
+  animation: ilFlotte 45s linear infinite;
+}
+
+@keyframes ilFlotte {
+  from {
+    transform: rotate(0deg) translateX(6%) rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg) translateX(6%) rotate(-360deg);
+  }
+}
+
+.lune {
+  background: rgba(0, 0, 0, 0.3) url(../photos/moon.png) no-repeat;
+  background-position: right -2% top 50%;
+  background-size: contain;
+}

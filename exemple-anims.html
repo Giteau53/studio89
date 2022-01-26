@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemples animations CSS</title>
+    <style>
+
+        header {
+            background-color: grey;
+        }
+
+        /* 1ère animation avec survol du logo */
+        .logo, .logo2 {
+            width: 90px;
+            height: 90px;
+            background-color: black;
+            margin-left:0;
+            /* Pour faire des micro animations */
+            /* propriété transition */
+            /* en premier vous mettez la propriété à animer */
+            /* /* en deuxième vous mettez le temps de l'animation en s ou ms */
+            /* 3e paramètre, optionnel (il y en a d'autres, je vous laisserais chercher) */
+
+        }
+
+        .logo {
+            transition: margin-left 3.5s ease-in;
+        }
+
+        .logo2 {
+            top: 120px;
+            transition: margin-left 3.5s linear;
+        }
+
+        /* .logo:hover {
+            background-color: blue;
+        } */
+
+        body:hover .logo {
+            margin-left: 50%;
+        }
+
+        body:hover .logo2 {
+            margin-left: 50%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+    <div class="logo"></div>
+    <div class="logo2"></div>
+    </header>
+</body>
+</html>

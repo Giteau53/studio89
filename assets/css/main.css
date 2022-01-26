@@ -1,0 +1,62 @@
+/* Traite tous les css de mon menu (Hamburger et Overlay) */
+@import url(_elements.css);
+
+/* Traite tous les css de mon menu (Hamburger et Overlay) */
+@import url(_menu.css);
+
+/* Gestion du slider slider */
+@import url(_slider.css);
+
+@media screen and (min-width: 768px) {
+  html {
+    font-size: 80%;
+  }
+
+  header {
+    justify-content: space-between;
+    padding-left: 9rem;
+    position: fixed;
+    width: 100%;
+  }
+
+  .logo {
+    top: inherit;
+    bottom: 0;
+  }
+
+  .slider__interieur {
+    justify-content: flex-start;
+    padding-left: 9rem;
+  }
+
+  .hamburger {
+    top: 2rem;
+    right: auto;
+    position: initial;
+    margin-left: 0;
+  }
+
+  .sociaux {
+    position: initial;
+    flex-direction: row;
+    justify-content: flex-end;
+    flex-grow: 1;
+  }
+
+  .sociaux__follow {
+    display: flex;
+  }
+
+  .full-menu li {
+    font-size: 6rem;
+    line-height: 1.4;
+  }
+
+  .full-menu a {
+    font-size: 6rem;
+  }
+
+  .punchline__titre {
+    font-size: 5rem;
+  }
+}
